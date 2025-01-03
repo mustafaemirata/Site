@@ -1,6 +1,8 @@
 # Site
 Portföy göstermek amacıyla geliştirdiğim web sitem.
-## aşlangıç Ekranı
+
+[Bağlantıya Git](https://www.mustafaemirata.net.tr/)
+## Başlangıç Ekranı
 ![Örnek Görsel](Web/img/1.png)
 
 ## Eğitimlerim 
