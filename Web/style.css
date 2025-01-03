@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: #fff;
+    --main-color: #081b70;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+span {
+    color: var(--main-color);
+}
+
+section {
+    color: var(--main-color);
+}
+
+/* RESET CSS END*/
+
+/* HEADER START*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12%;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    /* Navbar elemanları arasındaki mesafe */
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    /* Geçiş animasyonu */
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+/* Mobil için düzenleme */
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 8%;
+        /* Padding'i düşürdüm */
+    }
+
+    .logo {
+        font-size: 2rem;
+        /* Logo boyutunu küçülttüm */
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        /* Navbar elemanlarının yazı boyutunu küçülttüm */
+    }
+
+    #menu-icon {
+        font-size: 2.5rem;
+        /* Menü ikonunun boyutunu küçülttüm */
+        display: block;
+        /* Mobilde görünür yapıldı */
+    }
+}
+
+/* HEADER END*/
+
+/* HOME START*/
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10%;
+    text-align: left;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    /* Yazı ile görsel arasındaki mesafeyi arttırdım */
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    margin-top: 0;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.home-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.home-img img {
+    width: 20vw;
+    /* Görsel genişliğini küçülttüm */
+    max-width: 300px;
+    /* Maksimum genişlik ekledim */
+    position: relative;
+    top: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 300ms ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-group a:nth-of-type(2) {
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px transparent;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-group a:nth-of-type(2):hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+/* HOME END*/
+
+/* Education Section */
+.education {
+    background-color: var(--second-bg-color);
+    padding: 5rem 10%;
+}
+
+.education .heading {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.timeline-items {
+    position: relative;
+    margin: 0 auto;
+    border-left: 3px solid var(--main-color);
+    padding: 0 0 0 3rem;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 10px;
+    left: -2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--main-color);
+    border: 3px solid var(--text-color);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.timeline-date {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.timeline-content {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-left: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.timeline-content h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Projects Section */
+.projects {
+    background-color: var(--second-bg-color);
+    padding: 5rem 10%;
+}
+
+.projects .heading {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.category-button {
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-button:hover,
+.category-button.active {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    height: 250px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: none;
+    /* Varsayılan olarak gizli */
+    position: relative;
+    /* GitHub butonunu konumlandırmak için */
+}
+
+.project-card.visible {
+    display: block;
+    /* Görünür */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.project-title {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    /* GitHub butonuna daha fazla boşluk bıraktım */
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Butonu ortaladım */
+    color: var(--main-color);
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: absolute;
+    bottom: 2rem;
+    /* Butonu alt kısma taşıdım */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.github-link i {
+    margin-right: 0.5rem;
+}
+
+.github-link:hover {
+    color: var(--text-color);
+}
+
+/* Certifications Section */
+.certifications {
+    background-color: var(--second-bg-color);
+    padding: 5rem 10%;
+}
+
+.certifications .heading {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.certification-card {
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.certification-card h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.certification-card p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 10%;
+    background-color: var(--bg-color);
+}
+
+.about .heading {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card {
+    background-color: var(--second-bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-card h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--second-bg-color);
+    padding: 5rem 10%;
+}
+
+.contact .heading {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-card p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.contact-card a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-card a:hover {
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+footer .copyright {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+footer .footer-content {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer .social-links a:hover {
+    color: #0073b1;
+    /* LinkedIn hover efekti */
+}
+
+/* .copyright kısmı içinde yer alan "2025 Mustafa Emir Ata" yazısını beyaz yapmak */
+footer .copyright {
+    color: black;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    /* Sosyal medya bağlantıları arasındaki mesafe */
+}
+
+.social-link {
+    text-decoration: none;
+    color: #fff;
+    /* Sosyal medya ikonlarının rengi beyaz olacak */
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #0073b1;
+    /* LinkedIn renginde örnek bir hover efekti */
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #000000;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Metin ile sosyal bağlantılar arasındaki mesafe */
+    width: auto;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    /* Sosyal medya bağlantıları arasındaki mesafe */
+}
+
+.social-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #0073b1;
+    /* LinkedIn renginde örnek bir hover efekti */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img {
+        margin-top: 2rem;
+    }
+
+    .timeline-items {
+        padding-left: 1rem;
+    }
+
+    .project-card,
+    .certification-card {
+        width: 100%;
+    }
+
+    .about-container,
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--second-bg-color);
+        padding: 2rem 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 1rem 2rem;
+        font-size: 2rem;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
