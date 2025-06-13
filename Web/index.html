@@ -4,498 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustafa Emir ATA</title>
-    <link rel="shortcut icon" href="code.png" type="image/x-icon" />
-<link rel="icon" type="image/png" href="code.png">
-
+    <title>Mustafa Emir Ata</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
-    <!-- Header START -->
-    <header class="header">
-        <a href="#home" class="logo"><span>Mustafa Emir ATA</span></a>
+    <header>
+        <a href="#" onclick="showSection('home')" style="text-decoration: none; color: inherit;">
+            <div class="logo">MEA</div>
+        </a>
+        <div class="menu-buttons">
+            <button onclick="showSection('home')">Ana Sayfa</button>
+            <button onclick="showSection('projects')">Projeler</button>
+            <button onclick="window.open('cv.pdf', '_blank')">CV</button>
 
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Ana Sayfa</a>
-            <a href="#education">Eğitim</a>
-            <a href="#about">Hakkında</a>
-            <a href="#projects">Projelerim</a>
-            <a href="#certifications">Sertifikalar</a>
-            <a href="#contact">İletişim</a>
-        </nav>
+        </div>
     </header>
-    <!-- Header FINISH -->
 
-    <!-- Home Section START -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Merhaba,</h1>
-            <h3 class="text-animation">Ben Mustafa <span class="typing">Yazılım Geliştiricisiyim</span></h3>
-            <p>
-                Bu web sitesinde geliştirdiğim projeleri, ve özgeçmişimi inceleyerek bana ulaşabilirsiniz. 
-            </p>
-
-            <div class="social-icons">
-                <a href="https://www.instagram.com/mustafaemirata/" target="_blank"> <i class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/mustafa-emir-ata-b956aa28b/" target="_blank"> <i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/mustafaemirata" target="_blank"> <i class='bx bxl-github'></i></a>
-            </div>
-
-            <div class="btn-group">
-                <a href="#" class="btn">CV</a>
-                <a href="#contact" class="btn">Bana Ulaş</a>
-            </div>
-        </div>
-
-        <div class="home-img">
-            <img src="fotom.jpeg" alt="Mustafa Emir ATA">
-        </div>
-    </section>
-    <!-- Home Section FINISH -->
-	    <!-- About Section START -->
-    <section class="about" id="about">
-        <h2 class="heading">Hakkımda</h2>
-        <div class="about-container">
-            <div class="about-card">
-                <h3>Hakkımda</h3>
-                <p>
-                   Bilgisayar mühendisliği 2. sınıf öğrencisiyim. Yazılım dünyasında farklı teknolojilerle deneyim kazanma fırsatı buldum. Kotlin ve Flutter kullanarak Firebase entegreli çeşitli mobil uygulamalar geliştirdim. Masaüstü tarafında C# ile otomasyon sistemleri üzerinde çalıştım ve .NET Framework ile projeler geliştirdim. Ayrıca, Java, SQL ve veritabanı yönetimi gibi konularda bilgi sahibiyim. Tüm bu deneyimlerin yanı sıra, özellikle siber güvenlik alanına büyük bir ilgi duyuyorum ve kariyerimi bu alanda ilerletmeyi hedefliyorum. Ayrıca veri bilimi konularına meraklıyım ve bu alandaki bilgi birikimimi artırmak için çalışmalar yapıyorum.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- About Section FINISH -->
-
-    <!-- Education Section START -->
-    <section class="education" id="education">
-        <h2 class="heading">Eğitim</h2>
-        <div class="timeline-items">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2023 - Devam Ediyor</div>
-                <div class="timeline-content">
-                    <h3>Çankırı Karatekin Üniversitesi</h3>
-                    <p>Bilgisayar Mühendisliği</p>
+    <main>
+        <section id="home" class="content-section">
+            <div class="intro">
+                <h1>Merhaba ben Mustafa Emir Ata,</h1>
+                <p class="lead">Mobil / Masaüstü Yazılım Geliştiricisi.</p>
+                <div class="profile-photo">
+                    <img src="fotom.jpg" alt="Mustafa Emir Ata Fotoğrafı">
+                </div>
+                <div class="status">
+                    <span class="online">● online</span>
+                    <span class="idle">Nothing</span>
+                </div>
+                <div class="skills">
+                    <h2>Beceriler</h2>
+                    <ul>
+                        <li>Kotlin</li>
+                        <li>Flutter</li>
+                        <li>Python</li>
+                        <li>C#</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="socials">
+                    <a href="mailto:mustafaemir.ata@outlook.com" target="_blank"><button class="contact">📧
+                            Contact</button></a>
+                    <a href="https://github.com/mustafaemirata" target="_blank"><button class="github">🐙
+                            GitHub</button></a>
+                    <a href="https://www.linkedin.com/in/mustafa-emir-ata-b956aa28b/" target="_blank"><button
+                            class="linkedin">💼 LinkedIn</button></a>
+                    <a href="https://instagram.com/mustafaemirrata" target="_blank"><button class="instagram">📷
+                            Instagram</button></a>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2022 - 2022</div>
-                <div class="timeline-content">
-                    <h3>Açık Öğretim Lisesi</h3>
-                    <p> - </p>
+            <div class="experience-education">
+                <div class="section-title">
+                    <h2>Deneyim & Eğitim</h2>
+                </div>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Simuleon Games <span class="present">PRESENT</span></h3>
+                        <p class="role">Co-Founder</p>
+                        <p class="date">2025 - Şu Anda</p>
+                    </div>
+                    <div class="card education-card">
+                        <h3>Çankırı Karatekin Üniversitesi</h3>
+                        <p class="degree">Bilgisayar Mühendisliği</p>
+                        <p class="date">2023 - Devam Ediyor</p>
+                    </div>
+
+                    <div class="card education-card">
+                        <h3>Cengizhan Anadolu Lisesi</h3>
+                        <p class="degree">Sayısal Bölüm</p>
+                        <p class="date">2019 - 2022</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2019 - 2022</div>
-                <div class="timeline-content">
-                    <h3>Cengizhan Anadolu Lisesi</h3>
-                    <p>Sayısal Bölüm</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Education Section FINISH -->
+        <section id="projects" class="content-section" style="display: none;">
+            <h1>Projelerim</h1>
+            <p>Yaptığım bazı projeler:</p>
 
-    <!-- Projects Section START -->
-   <section class="projects" id="projects">
-        <h2 class="heading">Projelerim</h2>
+            <div class="project-cards">
+                <a href="https://github.com/mustafaemirata/SinemasyonProjesi" target="_blank" class="card-link">
+                    <div class="card">
+                        <h2>Sinemasyon Projesi</h2>
+                        <p>Masaüstü uygulama</p>
+                        <div class="tags">
+                            <span>C#</span>
+                            <span>SQL</span>
+                            <span>Entity</span>
+                        </div>
+                    </div>
+                </a>
 
-        <!-- Kategori Seçim Çubuğu -->
-        <div class="category-buttons">
-            <button class="category-button active" data-category="all">Tümü</button>
-			 <button class="category-button" data-category="java">Java</button>
-            <button class="category-button" data-category="cpp">C++</button>
-            <button class="category-button" data-category="c">C</button>
+                <a href="https://play.google.com/store/apps/details?id=com.mustafaemirata.personelkaydet&utm_source=emea_Med"
+                    target="_blank" class="card-link">
+                    <div class="card">
+                        <h2>Borsa Simulator</h2>
+                        <p>Gerçek hayat risk denetimi.</p>
+                        <div class="tags">
+                            <span>Kotlin</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </a>
 
-            <button class="category-button" data-category="csharp">C#</button>
-            <button class="category-button" data-category="kotlin">Kotlin</button>
-            <button class="category-button" data-category="python">Python</button>
-			
-        </div>
+                <a href="https://github.com/mustafaemirata/Restaurant-System" target="_blank" class="card-link">
+                    <div class="card">
+                        <h2>Restaurant Otomasyonu</h2>
+                        <p>Temel işletme faaliyetleri, ürün satışları</p>
+                        <div class="tags">
+                            <span>Java </span>
+                            <span>MsSql</span>
+                        </div>
+                    </div>
+                </a>
 
-        <!-- Projeler -->
-
-			
-			
-			
-        <div class="projects-container">
-        <div class="project-card" data-category="kotlin">
-            <h3 class="project-title">Register System</h3>
-            <p class="project-description">Kotlin ile geliştirilmiş şık UI düzenine sahip kayıt olma ekran tasarımı.</p>
-            <a href="https://github.com/mustafaemirata/Register-System-Kotlin-" class="github-link" target="_blank">
-                <i data-feather="github"></i> GitHub
-            </a>
-        </div>
-
-        <div class="project-card" data-category="kotlin">
-            <h3 class="project-title">Borsa Simülatörü (Yayınlandı)</h3>
-            <p class="project-description">Kullanıcıların şirket yönetip kaynaklarını geliştirerek rekabet ettiği online oyun. Kullanılan Dil: Kotlin</p>
-            <a href="https://play.google.com/store/apps/details?id=com.mustafaemirata.personelkaydet&hl=tr" class="github-link" target="_blank">
-                <i data-feather="github"></i> GitHub
-            </a>
-        </div>
-
-        <div class="project-card" data-category="kotlin">
-            <h3 class="project-title">Hotel World (Geliştiriliyor)</h3>
-            <p class="project-description">Blockchain teknolojisi kullanılarak yönetilen otelde müşteri memnuniyetine göre elde edilen coinleri paraya dönüştürerek borsaya aktarın! Çok yakında test sürümüne açılacak. Kullanılan Dil: Kotlin</p>
-            <a href="#" class="github-link" target="_blank">
-                <i data-feather="github"></i> GitHub
-            </a>
-        </div>
-
-        <div class="project-card" data-category="kotlin">
-            <h3 class="project-title">Kelime Bankası</h3>
-            <p class="project-description">Translate API hizmetlerini kullanarak Türkçe kelimenin İngilizce karşılığını gösteren uygulama.</p>
-            <a href="https://github.com/mustafaemirata/Kelime-Bankasi" class="github-link" target="_blank">
-                <i data-feather="github"></i> GitHub
-            </a>
-        </div>
-    </div>
-			
-			
-			
-			   <div class="projects-container">
-            <div class="project-card" data-category="cpp">
-                <h3 class="project-title">Algoritma ve Örnekler</h3>
-                <p class="project-description">Okul döneminde çalışırken sakladığım örnek kodlar.</p>
-                <a href="https://github.com/mustafaemirata/Cpp-Kodlar" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
+                <a href="https://github.com/mustafaemirata/Word-Dictionary" target="_blank" class="card-link">
+                    <div class="card">
+                        <h2>Word Dictionary</h2>
+                        <p>İngilizce kelime sözlüğü</p>
+                        <div class="tags">
+                            <span>Kotlin</span>
+                        </div>
+                    </div>
                 </a>
             </div>
+        </section>
+    </main>
 
-         
-
-            <div class="project-card" data-category="cpp">
-                <h3 class="project-title">Çalışma Projeleri</h3>
-                <p class="project-description">C++ öğrenme sürecinde yaptığım çalışmalar.</p>
-                <a href="https://github.com/mustafaemirata/Cpp-Kodlar" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="cpp">
-                <h3 class="project-title">Otobüs Bilet Sistemi</h3>
-                <p class="project-description">Güzergah tanımlama, bilet alma ve koltuk seçme işlemleri içeren üniversite projesi.</p>
-                <a href="https://github.com/mustafaemirata/Otobus" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="cpp">
-                <h3 class="project-title">Borsa Simülatörü</h3>
-                <p class="project-description">OOP mantığıyla döviz, kripto ve hisse alım-satım sistemi.</p>
-                <a href="https://github.com/mustafaemirata/Borsa-Simulasyonu" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="java">
-                <h3 class="project-title">Restaurant Otomasyon Sistemi</h3>
-                <p class="project-description">MySQL veri tabanına bağlı, kullanıcıların çeşitli işlemler gerçekleştirebildiği sistem.</p>
-                <a href="https://github.com/mustafaemirata/Restaurant-System" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="java">
-                <h3 class="project-title">Öğrenci Bilgi Sistemi</h3>
-                <p class="project-description">Grafik programlama ile dershane otomasyon sistemi.</p>
-                <a href="https://github.com/mustafaemirata/Students-Information-System" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="java">
-                <h3 class="project-title">Telefon Rehberi Sistemi</h3>
-                <p class="project-description">İsim, telefon numarası ve fotoğraf kayıt sistemi.</p>
-                <a href="https://github.com/mustafaemirata/Telephone-Directory" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="csharp">
-                <h3 class="project-title">Havaalanı Otomasyon Sistemi (Geliştiriliyor)</h3>
-                <p class="project-description">Pilot, uçak ve personel bilgisi yönetimi içeren otomasyon sistemi.</p>
-                <a href="#" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="csharp">
-                <h3 class="project-title">Sinema Otomasyon Projesi</h3>
-                <p class="project-description">Film, oyuncu ve yönetmen detayları ekleme sistemi.</p>
-                <a href="https://github.com/mustafaemirata/SinemasyonProjesi" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="csharp">
-                <h3 class="project-title">ChatApp</h3>
-                <p class="project-description">Kullanıcılar arasında mesajlaşma uygulaması.</p>
-                <a href="https://github.com/mustafaemirata/ChatApp/tree/main" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="csharp">
-                <h3 class="project-title">Akaryakıt Sistemi</h3>
-                <p class="project-description">Müşteri ve istasyon sahibi için akaryakıt yönetim sistemi.</p>
-                <a href="https://github.com/mustafaemirata/Akaryakit-Istasyonu" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="csharp">
-                <h3 class="project-title">Fotoğraflı Mail Telefon Kayıt Sistemi</h3>
-                <p class="project-description">Kullanıcı bilgilerini fotoğraf ile birlikte kayıt eden sistem.</p>
-                <a href="https://github.com/mustafaemirata/MailRehberKay-t" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="csharp">
-                <h3 class="project-title">Şifreleme Sistemi</h3>
-                <p class="project-description">Kullanıcı verilerini şifreleyerek SQL veri tabanına kaydeden sistem.</p>
-                <a href="https://github.com/mustafaemirata/VeriSifreleme" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-            <div class="project-card" data-category="csharp">
-                <h3 class="project-title">Resmin Üstüne Yazı Yazma</h3>
-                <p class="project-description">Yüklenen resmin üzerine istenen yazıyı ekleyen program.</p>
-                <a href="https://github.com/mustafaemirata/CSharp-Dosyalama-Islemleri" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div>
-
-				
-				 
-				
-				 
-				 	 <div class="projects-container">
-            <div class="project-card" data-category="java">
-                <h3 class="project-title">Çalışma Kodları</h3>
-                <p class="project-description"> Lisans 1.sınıfta çalışırken yazdığım küçük çalışmaların olduğu toplu github reposu.</p>
-                <a href="https://github.com/mustafaemirata/My-Java-Projects" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div> 
-						 
-						 	 	 <div class="projects-container">
-            <div class="project-card" data-category="java">
-                <h3 class="project-title">Veri Tabanlı Telefon Rehberi (GUI)</h3>
-                <p class="project-description"> Telefon rehberine kullanıcı isim soy isim ve telefon bilgisiyle resmini kaydedip saklayarak tablolama işlemi yapan program.</p>
-                <a href="https://github.com/mustafaemirata/Telephone-Directory" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div> 
-									 
-			 <div class="projects-container">
-            <div class="project-card" data-category="c">
-                <h3 class="project-title">Hava Savunma Sistemi</h3>
-                <p class="project-description"> İçerisine yığın, kuyruk ve linkedlist kullanarak 3 farklı türde kullanılan hava savunma sistem kaydı oluşturmaya yarayan algoritma.</p>
-                <a href="https://github.com/mustafaemirata/HavaSavunmaKayit" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div> 
-				 
-				  <div class="projects-container">
-            <div class="project-card" data-category="c">
-                <h3 class="project-title">C Diliyle Yazılmış Alfgoritmalar</h3>
-                <p class="project-description"> İçerisinde sıralama/arama algoritmaları (binary searc, bubble sort, quick sort), aritmetik dizi işlemi, hanoi kuleleri, bağlı liste, stack ve linkedlist algoritmalarının olduğu repo.</p>
-                <a href="https://github.com/mustafaemirata/Algoritma-Ornekleri" class="github-link" target="_blank">
-                    <i data-feather="github"></i> GitHub
-                </a>
-            </div> 
-				 
-				 
-				 
-				 
-				 
-				
-        </div>
-    </section>
-    <!-- Projects Section FINISH -->
-
-    <!-- Certifications Section START -->
-    <section class="certifications" id="certifications">
-        <h2 class="heading">Sertifikalar</h2>
-        <div class="certifications-container">
-			<div class="certification-card">
-                <h3>İleri Seviye Python Programalam Dili</h3>
-                <p>Sadık Turan - BTK Akademi</p>
-            </div>
-			<div class="certification-card">
-                <h3>Siber Güvenliğe Giriş</h3>
-                <p>Atıl Samancıoğlu - BTK Akademi</p>
-            </div>
-			<div class="certification-card">
-                <h3>R ile Veri Bilimine Giriş</h3>
-                <p>Özge Özmen - BTK Akademi</p>
-            </div>
-			<div class="certification-card">
-                <h3>Git-Github</h3>
-                <p>Caner Mollaoğlu - İstanbul EĞitim Akademi</p>
-            </div>
-			  <div class="certification-card">
-                <h3>Kişiselleştirilmiş GPT'ler</h3>
-                <p>Atıl Samancıoğlu - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Bilgisayar Ağları</h3>
-                <p>Sinan Çeçen - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Doküman Tipleri ve Veri Formatları</h3>
-                <p>Yücel Alkan - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Versiyon Kontrolleri: Git ve Github</h3>
-                <p>Atıl Samancıoğlu - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Veri Bilimi için Python ve Tensorflow</h3>
-                <p>Atıl Samancıoğlu - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Kotlin Programlama Dili</h3>
-                <p>Atıl Samancıoğlu - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Kotlin ile Android Uygulama Geliştirme</h3>
-                <p>Atıl Samancıoğlu - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Kotlin Programlama Dili</h3>
-                <p>Atıl Samancıoğlu - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Java ile Programlamaya Giriş</h3>
-                <p>Engin Demiroğ - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Unity ile 3D Oyun Geliştirme (Atölye)</h3>
-                <p>Tarık Bağrıyanık - BTK Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>A’dan Z’ye Python</h3>
-                <p>Kubilay Erkeç - Udemy</p>
-            </div>
-            <div class="certification-card">
-                <h3>C#</h3>
-                <p>Caner Mollaoğlu - İstanbul Eğitim Akademi</p>
-            </div>
-            <div class="certification-card">
-                <h3>Java ile OOP</h3>
-                <p>Kardelen Tugay - İstanbul Eğitim Akademi</p>
-            </div>
-        </div>
-    </section>
-    <!-- Certifications Section FINISH -->
-
-
-
-    <!-- Contact Section START -->
-    <section class="contact" id="contact">
-        <h2 class="heading">İletişim</h2>
-        <div class="contact-container">
-            <div class="contact-card">
-                <h3>İletişim Bilgilerim</h3>
-                <p><strong>Email:</strong> <a href="mailto:mustafaemir.ata@outlook.com">mustafaemir.ata@outlook.com</a></p>
-                <p><strong>Telefon:</strong> <a href="tel:+905522220634">0552 222 06 34</a></p>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section FINISH -->
-
-<!-- Footer START -->
-<footer>
-    <div class="footer-content">
-        <span class="copyright">© 2025 Mustafa Emir ATA</span>
-        <div class="social-links">
-            <a href="https://github.com/mustafaemirata" class="social-link" target="_blank">
-                <i data-feather="github"></i>
-            </a>
-            <a href="https://linkedin.com/in/mustafaemirata" class="social-link" target="_blank">
-                <i data-feather="linkedin"></i>
-            </a>
-        </div>
-    </div>
-</footer>
-<!-- Footer FINISH -->
-
-
-    <!-- Scripts -->
     <script>
-        feather.replace(); // Feather Icons'u etkinleştir
-
-        // Mobil Menü İşlevi
-        const menuIcon = document.getElementById('menu-icon');
-        const navbar = document.querySelector('.navbar');
-
-        menuIcon.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-            menuIcon.classList.toggle('bx-x');
-        });
-
-        // Kategori butonları için JavaScript
-        const categoryButtons = document.querySelectorAll('.category-button');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        // Sayfa yüklendiğinde tüm projeleri göster ve "Tümü" butonunu aktif yap
-        window.addEventListener('DOMContentLoaded', () => {
-            categoryButtons.forEach(button => {
-                if (button.getAttribute('data-category') === 'all') {
-                    button.classList.add('active');
-                } else {
-                    button.classList.remove('active');
-                }
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
             });
-            projectCards.forEach(card => {
-                card.classList.add('visible');
-            });
-        });
-
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Tüm butonlardan active sınıfını kaldır
-                categoryButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                // Kategori seçimi
-                const selectedCategory = button.getAttribute('data-category');
-
-                // Tüm proje kartlarını gizle
-                projectCards.forEach(card => {
-                    card.classList.remove('visible');
-                });
-
-                // Eğer "Tümü" seçildiyse tüm projeleri göster
-                if (selectedCategory === 'all') {
-                    projectCards.forEach(card => {
-                        card.classList.add('visible');
-                    });
-                } else {
-                    // Seçilen kategorinin projelerini göster
-                    projectCards.forEach(card => {
-                        if (card.getAttribute('data-category') === selectedCategory) {
-                            card.classList.add('visible');
-                        }
-                    });
-                }
-            });
-        });
+            document.getElementById(sectionId).style.display = 'block';
+        }
     </script>
+
 </body>
 
 </html>
