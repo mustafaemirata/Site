@@ -8,36 +8,46 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     min-height: 100vh;
     color: #ffffff;
     overflow-x: hidden;
 }
 
-/* Arkaplan resmi için ayrı element */
+/* Arkaplan resmi için ayrı element (16:9 Aspect Ratio Korumalı) */
 body::after {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background-image: url('assets/background/tren.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    filter: blur(7px);
+    filter: blur(3px);
     z-index: -2;
 }
 
+/* 16:9 Aspect Ratio için media query'ler */
+@media (min-aspect-ratio: 16/9) {
+    body::after {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
 
+@media (max-aspect-ratio: 16/9) {
+    body::after {
+        width: auto;
+        height: 100%;
+        aspect-ratio: 16/9;
+    }
+}
 
 /* Background overlay for better readability */
-
 body::before {
     content: '';
     position: fixed;
@@ -45,19 +55,14 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.05);
-    /* 🔹 0.3 → 0.05, arka plan artık çok belirgin */
+    background: rgba(0, 0, 0, 0.15);
     z-index: -1;
 }
 
-
 /* Liquid Glass Effect — Daha Şeffaf & Parlak Versiyon */
-
 .glass-card {
     background: rgba(255, 255, 255, 0.04);
-    /* 🔹 Çok düşük opaklık */
     backdrop-filter: blur(40px);
-    /* 🔹 Yüksek blur, yumuşak görünüm */
     -webkit-backdrop-filter: blur(40px);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 20px;
@@ -67,15 +72,12 @@ body::before {
 
 .glass-card:hover {
     background: rgba(255, 255, 255, 0.06);
-    /* 🔹 Hover’da çok hafif vurgulu */
     border: 1px solid rgba(255, 255, 255, 0.18);
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-
 /* Navigation */
-
 .navbar {
     position: fixed;
     top: 0;
@@ -135,9 +137,7 @@ body::before {
     width: 100%;
 }
 
-
 /* Hamburger Menu */
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -165,9 +165,7 @@ body::before {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-
 /* Main Content */
-
 .main-content {
     margin-top: 80px;
     padding: 2rem 0;
@@ -192,9 +190,7 @@ body::before {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
 /* Profile Section */
-
 .profile-card {
     max-width: 800px;
     margin: 0 auto;
@@ -232,9 +228,7 @@ body::before {
     margin-bottom: 18px;
 }
 
-
 /* Contact Section */
-
 .contact-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -271,9 +265,7 @@ body::before {
     font-weight: 600;
 }
 
-
 /* Projects Section */
-
 .projects-intro {
     max-width: 800px;
     margin: 0 auto 3rem;
@@ -434,9 +426,7 @@ body::before {
     font-weight: 500;
 }
 
-
 /* Mobile Responsiveness */
-
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -451,69 +441,82 @@ body::before {
         padding: 2rem 0;
         gap: 1rem;
     }
+    
     .nav-menu.active {
         left: 0;
     }
+    
     .hamburger {
         display: flex;
     }
+    
     .container {
         padding: 0 1rem;
     }
+    
     .profile-card {
         padding: 2rem 1.5rem;
     }
+    
     .profile-image {
         width: 150px;
         height: 150px;
     }
+    
     .profile-name {
         font-size: 2rem;
     }
+    
     .profile-description {
         font-size: 1rem;
-        line-height: 1.7;         /* satırlar arası boşluk */
-        text-align: justify;      /* metni iki yana yasla */
-        text-indent: 40px;        /* paragrafın ilk satırını içeri kaydır */
-        margin-bottom: 18px;      /* paragraflar arası boşluk */
+        line-height: 1.7;
+        text-align: justify;
+        text-indent: 40px;
+        margin-bottom: 18px;
     }
     
     .section-title {
         font-size: 2rem;
     }
+    
     .contact-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
+    
     .games-grid,
     .apps-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+    
     .game-content,
     .app-content {
         padding: 0;
     }
+    
     .game-title,
     .app-title {
         font-size: 1.3rem;
     }
+    
     .game-description,
     .app-description {
         font-size: 0.95rem;
     }
+    
     .game-image,
     .app-image {
         width: 100px;
         height: 100px;
     }
-
+    
     .certificate-item {
         grid-template-columns: 1fr;
         gap: 0.5rem;
         text-align: center;
     }
-
+    
     .certificate-instructor,
     .certificate-platform {
         text-align: center;
@@ -524,65 +527,69 @@ body::before {
     .nav-container {
         padding: 0 1rem;
     }
+    
     .profile-card {
         padding: 1.5rem 1rem;
     }
+    
     .profile-image {
         width: 120px;
         height: 120px;
     }
+    
     .profile-name {
         font-size: 1.8rem;
     }
+    
     .contact-card {
         padding: 1.5rem;
     }
+    
     .contact-icon {
         width: 50px;
         height: 50px;
     }
+    
     .contact-cards {
         grid-template-columns: 1fr;
         gap: 0.8rem;
     }
+    
     .game-content,
     .app-content {
         padding: 0;
     }
+    
     .game-image,
     .app-image {
         width: 80px;
         height: 80px;
     }
-
+    
     .certificates-card {
         padding: 1.5rem;
     }
-
+    
     .certificate-item {
         padding: 0.8rem;
     }
-
+    
     .certificate-course {
         font-size: 0.9rem;
     }
-
+    
     .certificate-instructor,
     .certificate-platform {
         font-size: 0.8rem;
     }
 }
 
-
 /* Smooth scrolling */
-
 html {
     scroll-behavior: smooth;
 }
 
-
 /* Loading animation */
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -598,9 +605,7 @@ html {
     animation: fadeInUp 0.6s ease-out;
 }
 
-
 /* Custom scrollbar */
-
 ::-webkit-scrollbar {
     width: 8px;
 }
