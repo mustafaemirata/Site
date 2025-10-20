@@ -6,7 +6,7 @@
 🔗 [www.mustafaemirata.net.tr](https://www.mustafaemirata.net.tr/)
 
 
-Kişisel web sitemi paylaşmaktayım.
+Kişisel web sitemi paylaşmaktayım. Bu sitenin tüm CSS yapısı yapay zekayla yapılmıştır.
 ---
 
 
