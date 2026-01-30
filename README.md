@@ -17,11 +17,13 @@ Kişisel web sitemi paylaşmaktayım. Bu sitenin tüm CSS yapısı yapay zekayla
 ### Anasayfa
 ![Anasayfa](assets/resimlerim/anasayfa.png)
 
-### Projeler
-![Projeler](assets/resimlerim/projeler.png)
 
-### Sertifikalar
-![Sertifikalar](assets/resimlerim/sertifikalar.png)
+### Yetenekler
+![Sertifikalar](assets/resimlerim/yetenekler.png)
+
+### Projeler
+![Projeler](assets/resimlerim/projelerim.png)
+
 
 ### İletişim
 ![İletişim](assets/resimlerim/iletisim.png)
