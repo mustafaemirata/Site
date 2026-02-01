@@ -44,6 +44,7 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link active">Ana Sayfa</a>
+                <a href="#experience" class="nav-link">Deneyim</a>
                 <a href="#skills" class="nav-link">Yetenekler</a>
                 <a href="#projects" class="nav-link">Projeler</a>
                 <a href="#contact" class="nav-link">İletişim</a>
@@ -137,6 +138,69 @@
                         <div class="profile-image-wrapper">
                             <img src="assets/resimlerim/mustafaemirata.jpeg" alt="Mustafa Emir Ata"
                                 class="profile-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Deneyim</h2>
+                    <p class="section-subtitle">Profesyonel deneyimlerim ve çalışmalarım</p>
+                </div>
+                <div class="experience-grid">
+                    <!-- Cubetron Staj -->
+                    <div class="experience-card reveal">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <img src="assets/iconlar/cubetron.png" alt="Cubetron">
+                            </div>
+                            <div class="experience-title-wrapper">
+                                <h3 class="experience-title">Cubetron Yazılım Tic. ve San. Ltd. Şti.</h3>
+                                <span class="experience-badge internship">Zorunlu Staj • Donanım</span>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <p class="experience-description">
+                                Lojik ve elektronik devreler üzerinde çeşitli prototip geliştirmesi ve simülasyon
+                                ortamları incelemeleri gerçekleştirdim. Donanım tasarımı süreçlerinde aktif rol alarak
+                                mühendislik pratiği kazandım.
+                            </p>
+                            <div class="experience-tags">
+                                <span class="experience-tag">Elektronik Devreler</span>
+                                <span class="experience-tag">Prototipleme</span>
+                                <span class="experience-tag">Simülasyon</span>
+                                <span class="experience-tag">Lojik Tasarım</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simuleon -->
+                    <div class="experience-card reveal">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <img src="assets/iconlar/simuleon.png" alt="Simuleon">
+                            </div>
+                            <div class="experience-title-wrapper">
+                                <h3 class="experience-title">Simuleon</h3>
+                                <span class="experience-badge personal">Bireysel Marka</span>
+                            </div>
+                        </div>
+                        <div class="experience-content">
+                            <p class="experience-description">
+                                Kendi geliştirdiğim mobil uygulamaları ve oyunları yayınladığım, bağımsız
+                                geliştiriciliğimi temsil eden bireysel markam. App Store ve Google Play Store'da aktif
+                                olarak uygulamalarımı kullanıcılarla buluşturuyorum.
+                            </p>
+                            <div class="experience-tags">
+                                <span class="experience-tag">Mobil Uygulama</span>
+                                <span class="experience-tag">Oyun Geliştirme</span>
+                                <span class="experience-tag">App Store</span>
+                                <span class="experience-tag">Google Play</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -257,6 +321,9 @@
                     <!-- Mülakatım - Featured -->
                     <div class="project-card featured reveal" data-category="development">
                         <div class="project-image-container">
+                            <div class="store-badges">
+                                <img src="assets/iconlar/githubs.png" alt="GitHub" class="store-badge-icon">
+                            </div>
                             <div class="project-image"
                                 style="background: linear-gradient(135deg, #14b8a6, #0d9488); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
                                 🎯</div>
@@ -298,6 +365,11 @@
                             <img src="assets/uygulamaresimleri/borsasimulator.png" alt="Borsa Simulator"
                                 class="project-image">
                             <span class="project-category">Oyun</span>
+                            <div class="store-badges">
+                                <img src="assets/iconlar/appstore.png" alt="App Store" class="store-badge-icon">
+                                <img src="assets/iconlar/googleplaystore.png" alt="Google Play"
+                                    class="store-badge-icon">
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Borsa Simulator</h3>
@@ -314,11 +386,18 @@
                                     <span class="tech-badge">Firebase</span>
                                     <span class="tech-badge">Kotlin</span>
                                 </div>
-                                <a href="https://play.google.com/store/apps/details?id=com.mustafaemirata.personelkaydet"
-                                    target="_blank" class="store-btn">
-                                    <img src="assets/iconlar/googleplaystore.png" alt="Google Play">
-                                    İndir
-                                </a>
+                                <div class="store-links">
+                                    <a href="https://apps.apple.com/tr/app/borsa-simulator/id6755511135?l=tr"
+                                        target="_blank" class="store-link">
+                                        <img src="assets/iconlar/appstore.png" alt="App Store">
+                                        İndir
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.mustafaemirata.personelkaydet&hl=tr"
+                                        target="_blank" class="store-link">
+                                        <img src="assets/iconlar/googleplaystore.png" alt="Google Play">
+                                        İndir
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -328,6 +407,9 @@
                         <div class="project-image-container">
                             <img src="assets/uygulamaresimleri/hypeslicer.png" alt="Hype Slicer" class="project-image">
                             <span class="project-category">Oyun</span>
+                            <div class="store-badges">
+                                <img src="assets/iconlar/appstore.png" alt="App Store" class="store-badge-icon">
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Hype Slicers</h3>
@@ -344,7 +426,7 @@
                                     <span class="tech-badge">Strategy</span>
                                 </div>
                                 <a href="https://apps.apple.com/tr/app/hype-slicers/id6753694400?l=tr" target="_blank"
-                                    class="store-btn">
+                                    class="download-text-link">
                                     <img src="assets/iconlar/appstore.png" alt="App Store">
                                     İndir
                                 </a>
@@ -357,6 +439,10 @@
                         <div class="project-image-container">
                             <img src="assets/uygulamaresimleri/tradelog.jpg" alt="Tradelog" class="project-image">
                             <span class="project-category">Finans</span>
+                            <div class="store-badges">
+                                <img src="assets/iconlar/googleplaystore.png" alt="Google Play"
+                                    class="store-badge-icon">
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Tradelog</h3>
@@ -372,7 +458,7 @@
                                     <span class="tech-badge">Crypto API</span>
                                 </div>
                                 <a href="https://play.google.com/store/apps/details?id=com.tradelog&hl=tr"
-                                    target="_blank" class="store-btn">
+                                    target="_blank" class="download-text-link">
                                     <img src="assets/iconlar/googleplaystore.png" alt="Google Play">
                                     İndir
                                 </a>
@@ -385,6 +471,9 @@
                         <div class="project-image-container">
                             <img src="assets/uygulamaresimleri/resim.png" alt="Weather Now!" class="project-image">
                             <span class="project-category">Utility</span>
+                            <div class="store-badges">
+                                <img src="assets/iconlar/appstore.png" alt="App Store" class="store-badge-icon">
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Weather Now!</h3>
@@ -398,7 +487,7 @@
                                     <span class="tech-badge">Weather API</span>
                                 </div>
                                 <a href="https://apps.apple.com/tr/app/weather-now/id6751362696?l=tr" target="_blank"
-                                    class="store-btn">
+                                    class="download-text-link">
                                     <img src="assets/iconlar/appstore.png" alt="App Store">
                                     İndir
                                 </a>
@@ -409,6 +498,9 @@
                     <!-- Tweets -->
                     <div class="project-card reveal" data-category="development">
                         <div class="project-image-container">
+                            <div class="store-badges">
+                                <img src="assets/iconlar/githubs.png" alt="GitHub" class="store-badge-icon">
+                            </div>
                             <div class="project-image"
                                 style="background: linear-gradient(135deg, #1da1f2, #0d8ecf); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
                                 🐦</div>
@@ -441,6 +533,9 @@
                     <!-- Sinemasyon -->
                     <div class="project-card reveal" data-category="development">
                         <div class="project-image-container">
+                            <div class="store-badges">
+                                <img src="assets/iconlar/githubs.png" alt="GitHub" class="store-badge-icon">
+                            </div>
                             <div class="project-image"
                                 style="background: linear-gradient(135deg, #e50914, #b20710); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
                                 🎬</div>
@@ -473,6 +568,9 @@
                     <!-- Trades -->
                     <div class="project-card reveal" data-category="development">
                         <div class="project-image-container">
+                            <div class="store-badges">
+                                <img src="assets/iconlar/githubs.png" alt="GitHub" class="store-badge-icon">
+                            </div>
                             <div class="project-image"
                                 style="background: linear-gradient(135deg, #f7931a, #ff9500); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
                                 📈</div>
@@ -505,6 +603,9 @@
                     <!-- ChatApplication -->
                     <div class="project-card reveal" data-category="development">
                         <div class="project-image-container">
+                            <div class="store-badges">
+                                <img src="assets/iconlar/githubs.png" alt="GitHub" class="store-badge-icon">
+                            </div>
                             <div class="project-image"
                                 style="background: linear-gradient(135deg, #5865F2, #404eed); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
                                 💬</div>
@@ -538,6 +639,9 @@
                     <!-- Finansal CRM Sistemi -->
                     <div class="project-card reveal" data-category="development">
                         <div class="project-image-container">
+                            <div class="store-badges">
+                                <img src="assets/iconlar/githubs.png" alt="GitHub" class="store-badge-icon">
+                            </div>
                             <div class="project-image"
                                 style="background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;">
                                 💼</div>

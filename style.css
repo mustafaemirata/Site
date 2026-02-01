@@ -956,6 +956,7 @@ body {
     color: var(--text-secondary);
     font-size: 0.92rem;
     line-height: 1.65;
+    text-align: justify;
 }
 
 .skill-tags {
@@ -1015,6 +1016,8 @@ body {
     overflow: hidden;
     transition: all 0.4s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -1067,6 +1070,9 @@ body {
 
 .project-content {
     padding: 1.25rem 1.75rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-title {
@@ -1080,21 +1086,17 @@ body {
     font-size: 0.9rem;
     line-height: 1.7;
     margin-bottom: 1.25rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: 5.5rem;
+    text-align: justify;
 }
 
 .project-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid var(--border-color);
     flex-wrap: wrap;
-    gap: 0.75rem;
 }
 
 .project-tech {
@@ -1137,18 +1139,116 @@ body {
 }
 
 .github-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.4rem;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
     color: var(--accent-light);
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    background: rgba(230, 126, 34, 0.1);
+    transition: all 0.3s ease;
+}
+
+.github-link svg {
+    width: 20px;
+    height: 20px;
 }
 
 .github-link:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+/* Store Badges - Top Left */
+.store-badges {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.store-badge-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: contain;
+    background: rgba(10, 8, 8, 0.8);
+    padding: 4px;
+    transition: all 0.3s ease;
+}
+
+.store-badge-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Store Links (for multiple stores) */
+.store-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.store-link {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
     color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    background: rgba(230, 126, 34, 0.1);
+    transition: all 0.3s ease;
+}
+
+.store-link:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+.store-link img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+/* Simple Download Text Link */
+.download-text-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    background: rgba(230, 126, 34, 0.1);
+    transition: all 0.3s ease;
+}
+
+.download-text-link img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+.download-text-link:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
 }
 
 /* Contact Section */
@@ -1289,6 +1389,153 @@ body {
 .cv-btn svg {
     width: 20px;
     height: 20px;
+}
+
+/* Experience Section */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    background: linear-gradient(135deg, rgba(18, 14, 10, 0.95) 0%, rgba(28, 22, 16, 0.9) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.experience-card:hover::before {
+    transform: scaleX(1);
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(230, 126, 34, 0.5);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(230, 126, 34, 0.15);
+}
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: rgba(230, 126, 34, 0.1);
+    border: 1px solid rgba(230, 126, 34, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: all 0.4s ease;
+}
+
+.experience-card:hover .experience-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+}
+
+.experience-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.experience-title-wrapper {
+    flex: 1;
+}
+
+.experience-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+}
+
+.experience-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.experience-badge.internship {
+    background: rgba(39, 174, 96, 0.15);
+    color: #27ae60;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.experience-badge.personal {
+    background: rgba(155, 89, 182, 0.15);
+    color: #9b59b6;
+    border: 1px solid rgba(155, 89, 182, 0.3);
+}
+
+.experience-content {
+    padding-left: 0;
+}
+
+.experience-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.experience-tag {
+    background: rgba(230, 126, 34, 0.1);
+    color: var(--accent-light);
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.experience-tag:hover {
+    background: rgba(230, 126, 34, 0.25);
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -1529,6 +1776,28 @@ body {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .experience-title-wrapper {
+        text-align: center;
+    }
+
+    .experience-tags {
+        justify-content: center;
+    }
+
+    .experience-description {
+        text-align: center;
     }
 
     .projects-grid {
